@@ -1,0 +1,20 @@
+{
+  "name": "anynewsbutcovidnews",
+  "version": "1.0.0",
+  "description": "ANY NEWS BUT COVID NEWS...",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaroluna/AnyNewsButCovidNews.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaroluna/AnyNewsButCovidNews/issues"
+  },
+  "homepage": "https://github.com/alvaroluna/AnyNewsButCovidNews#readme"
+}
