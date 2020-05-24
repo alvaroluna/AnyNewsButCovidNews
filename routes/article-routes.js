@@ -1,7 +1,6 @@
 const express = require("express")
 const router = express.Router()
-// const db = require("../models")
-const db = null;
+const db = require("../models")
 const axios = require("axios")
 const cheerio = require("cheerio")
 
