@@ -1,8 +1,9 @@
-const express = require("express"),
-    router = express.Router(),
-    db = require("../models"),
-    axios = require("axios"),
-    cheerio = require("cheerio")
+const express = require("express")
+const router = express.Router()
+// const db = require("../models")
+const db = null;
+const axios = require("axios")
+const cheerio = require("cheerio")
 
 // Render the homepage
 router.get("/", function (req, res) {
@@ -18,7 +19,7 @@ router.get("/", function (req, res) {
 
 // Route to Scrape the Orlando Sentinel website
 router.get("/scrape", function (req, res) {
-    axios.get("https://www.orlandosentinel.com").then(function (response) {
+    axios.get("https://www.nytimes.com/").then(function (response) {
         var $ = cheerio.load(response.data);
 
         $("li.trb_outfit_group_list_item").each(function (i, element) {

@@ -5,13 +5,14 @@
     <div class="col-md-12 jumbotron">
         <div class="transparency-layer">
             <div class="text-center">
-                <h1> Saved Articles</h1>
+                <h1>News Articles</h1>
             </div>
             <div class="col-md-12 info">
                 <h3>Click on add a note to add notes to article and see past notes</h3>
             </div>
         </div>
     </div>
+
     <div class="col-md-12">
         {{#if article}} {{#each article}}
         <div class="panel panel-default">
@@ -28,6 +29,7 @@
                 <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
             </div>
         </div>
+
         {{/each}} {{else}}
         <div class="panel panel-default">
             <div class="panel-body">
