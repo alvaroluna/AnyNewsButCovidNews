@@ -1,68 +1,29 @@
-// const express = require("express");
-// const bodyParser = require("body-parser");
-// const logger = require("morgan");
-// const mongoose = require("mongoose");
-// const articleRoutes = require("./routes/api-routes.js");
-// const noteRoutes = require("./routes/index.js");
-// const expressApp = express();
-// const exphbs = require("express-handlebars");
-// const PORT = process.env.PORT || 3000;
-
-// // Parse request body as JSON
-// expressApp.use(express.urlencoded({ extended: true }))
-// expressApp.use(express.json())
-
-// // Accessing the Routes created
-// expressApp.use("/", articleRoutes)
-// expressApp.use("/", noteRoutes)
-
-// // Make public a static folder
-// expressApp.use(express.static("public"))
-
-// // Setting Handlebars
-// expressApp.engine("handlebars", exphbs({ defaultLayout: "main" }))
-// expressApp.set("view engine", "handlebars")
-
-
-// // Connect to the Mongo DB
-// // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
-// mongoose.connect(MONGODB_URI);
-
-// require("./routes/index.js")(expressApp)
-
-// // Start the server
-// expressApp.listen(PORT, function () {
-//     console.log("expressApp running on port " + PORT + "!");
-// });
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const app = express();
+const exphbs = require("express-handlebars");
+const PORT = process.env.PORT || 3000;
 
-var PORT = process.env.PORT || 3000;
-
+// setting up mongodb database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
-var app = express();
-
+// Parse request body as JSON
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
-
+// Accessing the Routes created
 require("./routes/index.js")(app)
 
-// additional libraries
-var exphbs = require("express-handlebars");
-
+// Setting Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Start the server
 app.listen(PORT, function () {
-    console.log("App running on port " + PORT + "!");
+    console.log("App running on port " + PORT + "!")
 });

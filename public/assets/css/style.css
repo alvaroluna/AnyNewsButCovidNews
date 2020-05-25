@@ -1,43 +1,71 @@
+/* ############# */
+/* CSS VARIABLES */
+/* ############# */
+* {
+    /* color palette */
+    --color-orange: 230, 102, 43;
+    --color-pink: 199, 44, 104;
+    --color-purple: 119, 25, 96;
+    --color-lightBlue: 47, 86, 233;
+    --color-drkBlue: 39, 24, 32;
+    --color-green: 74, 164, 123;
+    --color-black: 0, 0, 0;
+    --color-lightBlack: 53, 54, 58;
+    --alpha: 0.5;
+  
+    /* font families */
+    --font-headline: 'Merriweather', serif;
+    --font-textBody: 'Open Sans', sans-serif;
+  }
+
 body, html {
     height: 100%;
 }
 
 body {
-    background-image: url("../images/lined_paper.png");
+    background: rgb(255, 255, 255);
 }
+
+/* ///////// */
+/* JUMBOTRON */
+/* ///////// */
+
 .titleJumbotron {
     margin: 0px;
-    background: url("../images/coffee_image.jpg") no-repeat center center;
-    background-size: cover;
+    /* background: url("../images/fitNoCovid.png") no-repeat center center; */
+    /* background-size: cover; */
     background-attachment: fixed;
 }
 
 .headerDivJumbotron {
     margin-top: 50px;
     margin-bottom: 50px;
-    background: url("../images/lined_paper.png");
     text-align: center;
     border: 5px solid black;
     padding: 20px;
 }
 
 #headerJumbotron {
-    font-family: 'Special Elite', cursive;
+    font-family: var(--font-headline);
     font-size: 50px;
+    font-weight: 900;
     border-bottom: 2px solid black;
     
 }
 
 #subheaderJumbotron {
-    background: url("../images/lined_paper.png");
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px
+    font-family: var(--font-textBody);
+    font-size: 30px;
 }
+
+/* ///////////// */
+/* NAV BAR STYLE */
+/* ///////////// */
 
 #navbar {
     background-image: url("../images/chalkboard.jpg");
 	padding: 10px 30px 10px 30px;
-	font-family: 'Special Elite', cursive;
+	font-family: var(--font-textBody)
 	overflow: hidden;
 }
 
@@ -50,12 +78,18 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: url(../images/chalkboard.jpg);
     z-index: 2;
 }
 
+
+
+/* ///////////////////// */
+/* SCRAPED ARTICLE STYLE */
+/* ///////////////////// */
+
 .card-header {
-    background-image: url(../images/chalkboard.jpg);
+    /* background-image: url(../images/chalkboard.jpg); */
+    border: 1px solid black;
 }
 
 .card {
@@ -63,21 +97,23 @@ body {
 }
 
 .card-body {
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .headlineLink {
+    font-family: var(--font-headline);
+    font-weight: bolder;
     text-decoration: none;
-    color: white
+    color: black
 }
 
 .headlineLink:hover {
     text-decoration: none;
-    color: blue
+    color: darkgrey
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-textBody)
 }
 
 .articleImage {
@@ -91,7 +127,10 @@ p {
 .saveArticleButton {
     margin-top: 10px;
     padding: 10px;
-    font-family: 'Special Elite', cursive;
+    font-family: var(--font-textBody);
+    color: black;
+    border: 1px solid black;
+    background: white;
 }
 
 .modal-header {
