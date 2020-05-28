@@ -63,15 +63,9 @@ body {
 /* ///////////// */
 
 #navbar {
-    background-image: url("../images/chalkboard.jpg");
 	padding: 10px 30px 10px 30px;
-	font-family: var(--font-textBody)
+	font-family: var(--font-textBody);
 	overflow: hidden;
-}
-
-.navLink {
-    color: white;
-    margin-right: 50px;
 }
 
 .sticky {
@@ -81,6 +75,29 @@ body {
     z-index: 2;
 }
 
+/* sorta buttons */
+.navLink {
+    color: Black;
+    margin-right: 50px; 
+}
+
+#scrapeArticlesButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-family: var(--font-textBody);
+    color: black;
+    border: 1px solid black;
+    background: white;
+}
+
+#generalButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-family: var(--font-textBody);
+    color: black;
+    border: 1px solid black;
+    background: white;
+}
 
 
 /* ///////////////////// */
