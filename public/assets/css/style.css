@@ -81,6 +81,10 @@ body {
     margin-right: 50px; 
 }
 
+/* ///////////// */
+/* BUTTONS STYLE */
+/* ///////////// */
+
 #scrapeArticlesButton {
     margin-top: 10px;
     padding: 10px;
@@ -91,6 +95,15 @@ body {
 }
 
 #generalButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-family: var(--font-textBody);
+    color: black;
+    border: 1px solid black;
+    background: white;
+}
+
+#closeScrapeButton {
     margin-top: 10px;
     padding: 10px;
     font-family: var(--font-textBody);
