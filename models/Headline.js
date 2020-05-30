@@ -1,3 +1,4 @@
+// this file name needs to be lowercase for mongo...
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
