@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // setting up mongodb database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-// mongoose.Promise = Promise;
+mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 // Parse request body as JSON
