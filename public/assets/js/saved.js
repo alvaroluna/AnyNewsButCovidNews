@@ -1,6 +1,6 @@
+// event handlers on home does an api call to the api we created
+
 $(function () {
-
-
     $('.deleteSavedArticleButton').on("click", function (event) {
         event.preventDefault();
 

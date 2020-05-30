@@ -1,3 +1,5 @@
+// js file to ensure that the nav bar is always on top
+
 $(window).scroll(function () { scrollFunction() });
 // Get the navbar
 var navbar = document.getElementById("navbar");

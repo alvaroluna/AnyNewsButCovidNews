@@ -1,3 +1,5 @@
+// event handlers on home does an api call to the api we created
+
 $(function () {
     $('#scrapeArticlesButton').on("click", function (event) {
         event.preventDefault();
